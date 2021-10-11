@@ -1,0 +1,21 @@
+.PopularServices .card {
+    background-color: #DFEAFB;
+    padding: 20px;
+    margin: 2%;
+}
+
+.PopularServices img {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+}
+
+.PopularServices .card-img {
+    border-radius: 0%;
+}
+
+.PopularServices .card-img-top {
+    border-radius: 0%;
+}
+
+

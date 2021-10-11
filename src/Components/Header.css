@@ -1,0 +1,16 @@
+.Header .container {
+    display: flex;
+    padding-top: 1%;
+    justify-content: right;
+}
+
+.Header a{
+    margin-right: 1% ;
+    margin-left: 1%;
+    color: black;
+}
+
+.Header p{
+    margin-right: 1% ;
+    margin-left: 1%;
+}

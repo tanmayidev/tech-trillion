@@ -1,0 +1,29 @@
+.services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services .card {
+    margin-left:5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #DFEAFB;
+    font-family: "Roboto", sans-serif;
+}
+
+.services .ser-header {
+    margin: 5%;
+    font-family: "Roboto", sans-serif;
+}
+
+.services #ser-title {
+    margin: 2%;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.services .card-body {
+    margin-left: 2%;
+    margin-right: 2%;
+}

@@ -1,0 +1,33 @@
+
+.Courses .card {
+    background-color: #DFEAFB;
+    padding: 20px;
+    margin: 2%;
+}
+
+.Courses img {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+}
+
+.Courses .card-img {
+    border-radius: 0%;
+}
+
+.Courses .card-img-top {
+    border-radius: 0%;
+}
+
+.Courses .cour-header {
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: "Roboto", sans-serif;
+}
+
+.Courses .card-text {
+    text-align: left;
+}
+
+

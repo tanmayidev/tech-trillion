@@ -1,0 +1,13 @@
+.Testimonials .card {
+    background-color: #DFEAFB;
+    padding: 20px;
+    margin: 2%;
+    
+    overflow: scroll;
+}
+
+.Testimonials img {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+}

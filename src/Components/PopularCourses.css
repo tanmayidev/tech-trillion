@@ -1,0 +1,21 @@
+.PopularCourses .card {
+    background-color: #DFEAFB;
+    padding: 20px;
+    margin: 2%;
+}
+
+.PopularCourses img {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+}
+
+.PopularCourses .card-img {
+    border-radius: 0%;
+}
+
+.PopularCourses .card-img-top {
+    border-radius: 0%;
+}
+
+
