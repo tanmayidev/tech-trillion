@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tech-trillion/static/css/main.a62a352a.chunk.css",
-    "main.js": "/tech-trillion/static/js/main.d68093d1.chunk.js",
-    "main.js.map": "/tech-trillion/static/js/main.d68093d1.chunk.js.map",
+    "main.js": "/tech-trillion/static/js/main.6bf3968c.chunk.js",
+    "main.js.map": "/tech-trillion/static/js/main.6bf3968c.chunk.js.map",
     "runtime-main.js": "/tech-trillion/static/js/runtime-main.f36baf7d.js",
     "runtime-main.js.map": "/tech-trillion/static/js/runtime-main.f36baf7d.js.map",
     "static/css/2.fd6f04b9.chunk.css": "/tech-trillion/static/css/2.fd6f04b9.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.fd6f04b9.chunk.css",
     "static/js/2.30f137ca.chunk.js",
     "static/css/main.a62a352a.chunk.css",
-    "static/js/main.d68093d1.chunk.js"
+    "static/js/main.6bf3968c.chunk.js"
   ]
 }
