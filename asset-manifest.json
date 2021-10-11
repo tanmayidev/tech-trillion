@@ -16,10 +16,10 @@
     "static/js/2.651f1093.chunk.js.LICENSE.txt": "/tech-trillion/static/js/2.651f1093.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4a6f0fcc.js",
-    "static/css/2.fd6f04b9.chunk.css",
-    "static/js/2.651f1093.chunk.js",
-    "static/css/main.a62a352a.chunk.css",
-    "static/js/main.2f403775.chunk.js"
+    "tech-trillion/static/js/runtime-main.4a6f0fcc.js",
+    "tech-trillion/static/css/2.fd6f04b9.chunk.css",
+    "tech-trillion/static/js/2.651f1093.chunk.js",
+    "tech-trillion/static/css/main.a62a352a.chunk.css",
+    "tech-trillion/static/js/main.2f403775.chunk.js"
   ]
 }
