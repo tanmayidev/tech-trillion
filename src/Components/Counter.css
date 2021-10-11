@@ -1,0 +1,21 @@
+.Counter {
+    background-color: #DFEAFB;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Counter .item {
+    padding: 20px;
+}
+
+.Counter span {
+    font-size: xx-large;
+}
+
+.item img {
+    width: 50%;
+    height: 50%;
+}

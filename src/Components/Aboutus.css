@@ -1,0 +1,23 @@
+.Aboutus {
+    margin: 5%;
+}
+
+.Aboutus-body {
+    background-color: #DFEAFB;
+}
+
+.Aboutus-image-reach-out {
+    float: left;
+    margin: 5%;
+    width: 30%;
+    height: 30%;
+
+}
+
+.Aboutus-image-reach-grab {
+    float: right;
+    margin: 5%;
+    width: 30%;
+    height: 30%;
+
+}
