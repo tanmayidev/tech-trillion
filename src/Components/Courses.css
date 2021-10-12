@@ -1,8 +1,13 @@
 
+.Courses .row {
+    margin-bottom: 3%;
+}
+
 .Courses .card {
     background-color: #DFEAFB;
     padding: 20px;
     margin: 2%;
+    min-height: 100%;
 }
 
 .Courses img {
