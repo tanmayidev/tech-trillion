@@ -9,7 +9,7 @@ function Testimonials() {
             <CardGroup>
                 <Card>
                     <center>
-                    <Card.Img alt="" variant="top" src="tech-trillion/Images/speak.png" />
+                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/speak.png"} />
                     <Card.Body>
                         <Card.Title>Name</Card.Title>
                         <Card.Text>
@@ -21,7 +21,7 @@ function Testimonials() {
                 </Card>
                 <Card>
                     <center>
-                    <Card.Img alt="" variant="top" src="tech-trillion/Images/speak.png" />
+                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/speak.png"} />
                     <Card.Body>
                         <Card.Title>Name</Card.Title>
                         <Card.Text>
