@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/tech-trillion/static/css/main.a62a352a.chunk.css",
-    "main.js": "/tech-trillion/static/js/main.faad3afc.chunk.js",
-    "main.js.map": "/tech-trillion/static/js/main.faad3afc.chunk.js.map",
+    "main.css": "/tech-trillion/static/css/main.ac52dfc4.chunk.css",
+    "main.js": "/tech-trillion/static/js/main.ba9d0a44.chunk.js",
+    "main.js.map": "/tech-trillion/static/js/main.ba9d0a44.chunk.js.map",
     "runtime-main.js": "/tech-trillion/static/js/runtime-main.f36baf7d.js",
     "runtime-main.js.map": "/tech-trillion/static/js/runtime-main.f36baf7d.js.map",
     "static/css/2.fd6f04b9.chunk.css": "/tech-trillion/static/css/2.fd6f04b9.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.91f824fd.chunk.js.map": "/tech-trillion/static/js/3.91f824fd.chunk.js.map",
     "index.html": "/tech-trillion/index.html",
     "static/css/2.fd6f04b9.chunk.css.map": "/tech-trillion/static/css/2.fd6f04b9.chunk.css.map",
-    "static/css/main.a62a352a.chunk.css.map": "/tech-trillion/static/css/main.a62a352a.chunk.css.map",
+    "static/css/main.ac52dfc4.chunk.css.map": "/tech-trillion/static/css/main.ac52dfc4.chunk.css.map",
     "static/js/2.73bb1e78.chunk.js.LICENSE.txt": "/tech-trillion/static/js/2.73bb1e78.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f36baf7d.js",
     "static/css/2.fd6f04b9.chunk.css",
     "static/js/2.73bb1e78.chunk.js",
-    "static/css/main.a62a352a.chunk.css",
-    "static/js/main.faad3afc.chunk.js"
+    "static/css/main.ac52dfc4.chunk.css",
+    "static/js/main.ba9d0a44.chunk.js"
   ]
 }
