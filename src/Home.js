@@ -8,13 +8,19 @@ export default function Home() {
     return (
         <>
         <CarouselBox />
+        <div className="animatedParent">
         <PopularCourses />
+        </div>
         <br/>
         <br/>
+        <div className="animatedParent">
         <PopularService />
+        </div>
         <br/>
         <br/>
+        <div className="animatedParent">
         <Testimonials />
+        </div>
         <br/>
         <br/>
         <br/>

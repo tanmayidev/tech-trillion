@@ -4,15 +4,19 @@ import Counter from "./Counter";
 
 function Aboutus() {
     return (
+        <div className="animatedParent">
         <Card className="Aboutus">
+        <div className="animated growIn">
             <Card.Body className="Aboutus-body">
             <center><h1>What we do?</h1></center>
             <br/><br/>
                 <Card.Text>
+                <div className="animated rotateIn">
                 <img className="Aboutus-image-reach-out" alt="" src= {process.env.PUBLIC_URL + "/Images/reachOut.png"}/>
+                </div>
                 <h2>We've got you covered!</h2>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper, lorem sit amet lobortis molestie, nulla dui tristique lorem, id dapibus turpis eros vitae eros. Nulla elit est, dignissim nec iaculis at, aliquet nec metus. Nulla facilisi. Vivamus elementum ex vel justo consectetur accumsan. Curabitur sed volutpat odio. Morbi vehicula posuere convallis. Quisque efficitur interdum mi ut feugiat. Maecenas vel interdum ex. Quisque in lacinia urna. Duis sit amet gravida erat, id vestibulum massa. Praesent mattis hendrerit lacus. Suspendisse at neque hendrerit, consectetur neque vitae, dapibus lorem. Phasellus fermentum laoreet pretium. Suspendisse nec nisl eu eros efficitur convallis. Fusce accumsan nisl in justo eleifend, tincidunt eleifend neque viverra.
-                <br/><br/><img className="Aboutus-image-reach-grab" alt="" src={process.env.PUBLIC_URL + "/Images/reach-grab.png"} /><br/><br/>
+                <br/><br/><div className="animated rotateIn"><img className="Aboutus-image-reach-grab" alt="" src={process.env.PUBLIC_URL + "/Images/reach-grab.png"} /></div><br/><br/>
                 <h2>Join us!</h2>
                 Nulla fermentum orci vel iaculis luctus. Nulla vulputate tempor pharetra. Nulla efficitur magna lectus, eget ultricies nibh gravida quis. Morbi ornare tortor in mi placerat, vitae porttitor libero mattis. Ut semper magna placerat, mollis risus non, fringilla elit. Mauris cursus felis et commodo condimentum. Proin mollis ipsum vel turpis facilisis, nec fringilla lacus posuere. Vestibulum quis aliquet erat, id sodales elit. Donec tempus ornare tortor, in aliquet mauris dictum quis. Praesent gravida sit amet nisl sit amet varius. Nunc vitae velit ut orci aliquet porttitor id in nulla. Sed sit amet augue nec odio tempor malesuada. Pellentesque urna mauris, mollis quis convallis vitae, convallis vitae est. Proin posuere urna ultricies euismod vulputate.
                 <br/><br/><br/><br/><br/><br/>
@@ -21,7 +25,9 @@ function Aboutus() {
                 <Counter />
                 </Card.Text>
             </Card.Body>
+            </div>
         </Card>
+        </div>
     )
 }
 

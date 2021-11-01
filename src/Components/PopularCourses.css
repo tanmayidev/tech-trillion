@@ -1,21 +1,24 @@
-.PopularCourses .card {
-    background-color: #DFEAFB;
-    padding: 20px;
-    margin: 2%;
+.overlay-card-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
 }
 
-.PopularCourses img {
-    width: 40%;
-    height: 40%;
-    border-radius: 50%;
-}
-
-.PopularCourses .card-img {
-    border-radius: 0%;
-}
-
-.PopularCourses .card-img-top {
-    border-radius: 0%;
+.overlay-card {
+    display: flex;
+    min-width: 350px;
+    min-height: 250px;
+    background-color:lightblue;
+    margin:1rem;
+    box-shadow: 5px 10px 20px gray;
+    border-radius: 5%;
 }
 
 
+.card-content {
+    width: 350px;
+    align-self:flex-end;
+    background-color: rgba(128,128,128, 0.7);
+    padding: 0.5rem;
+    font-family: "Roboto", sans-serif;
+}

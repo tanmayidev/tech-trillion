@@ -1,242 +1,277 @@
 import './Courses.css'
-import { Card, CardGroup, Button, Container, Row, Col, Modal } from 'react-bootstrap';
+import { Card, CardGroup, Button, Container, Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import SyllabusModal from './SyllabusModal'
+import { 
+    ReactCourse, 
+    CPP, 
+    Python, 
+    NodeJS, 
+    Clanguage, 
+    JavaFundamental, 
+    MobileAppDevelopmentWithJava, 
+    SQLite, 
+    FrontendFundamentals } 
+    from './Syllabus'
 
 function Courses() {
 
-    const [showModal, setShow] = useState(false);
+    const [visibility, setVisibility] = useState(0)
+    const [data, setData] = useState([])
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    function handleClick(e) {
+        setData(e)
+        setVisibility(1)
+    }
+
+    function closeModal() {
+        setVisibility(false)
+    }
 
     return (
         <>
-            {/* MODAL-FOR-SYLLABUS */}
-            <Modal className="my-modal" show={showModal} onHide={handleClose}>
-                <Modal.Header closeButton>SYLLABUS</Modal.Header>
-                <Modal.Body>
-                    <ul>
-                        <li style={{ padding: "5px" }}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                        <li style={{ padding: "5px" }}>Aliquam tincidunt mauris eu risus.</li>
-                        <li style={{ padding: "5px" }}>Vestibulum auctor dapibus neque.</li>
-                        <li style={{ padding: "5px" }}>Nunc dignissim risus id metus.</li>
-                        <li style={{ padding: "5px" }}>Cras ornare tristique elit.</li>
-                        <li style={{ padding: "5px" }}>Vivamus vestibulum ntulla nec ante.</li>
-                        <li style={{ padding: "5px" }}>Praesent placerat risus quis eros.</li>
-                        <li style={{ padding: "5px" }}>Fusce pellentesque suscipit nibh.</li>
-                        <li style={{ padding: "5px" }}>Integer vitae libero ac risus egestas placerat.</li>
-                        <li style={{ padding: "5px" }}>Vestibulum commodo felis quis tortor.</li>
-                        <li style={{ padding: "5px" }}>Ut aliquam sollicitudin leo.</li>
-                        <li style={{ padding: "5px" }}>Cras iaculis ultricies nulla.</li>
-                        <li style={{ padding: "5px" }}>Donec quis dui at dolor tempor interdum.</li>
-                    </ul>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button onClick={handleClose} style={{ background: "rgba(143, 201, 254, 1)", borderRadius: "11px", height: "40px", width: "180px" }} variant=''>
-                        Apply Now
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-
-            {/* END-OF-MODAL-FOR-SYLLABUS */}
-
             
-            <div className="Courses">
-            <h1 className="cour-header">COURSES</h1>
-                <CardGroup>
-                    <Container>
-                        {/* ROW-1 */}
-                        <Row>
-                            <Col>
-                                <Card >
-                                    <center>
-                                        <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/devops.png"} />
-                                        <Card.Body>
-                                            <Card.Title>DEV OPS</Card.Title>
-                                            <Card.Text>
-                                            DevOps is a set of practices that combines software development and IT operations. It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.
-                                            </Card.Text>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  onClick={handleShow} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{textDecoration:"none", color:"#000"}} to="/tech-trillion/certificate">SAMPLE CERTIFICATE</Link></Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
-                                        </Card.Body>
-                                    </center>
-                                </Card>
-                            </Col>
+                <div className="Courses">
+                    <h1 className="cour-header">COURSES</h1>
+                    <CardGroup>
+                        <Container>
+                            {/* ROW-1 */}
+                            <div className="animatedParent">
+                            <Row>
+                                <Col>
+                                    <Card>
+                                        <div className="animated fadeIn">
+                                            <center>
+                                                <div className="animated rotateIn">
+                                                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/c.png"} style={{ width: "100%" }} />
+                                                </div>
+                                                <Card.Body>
+                                                    <Card.Title>C LANGUAGE</Card.Title>
+                                                    <Card.Text>
+                                                        C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system. It is ranked as the top two best languages to master.
+                                                    </Card.Text>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" onClick={() => handleClick(Clanguage)} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/certificate">SAMPLE CERTIFICATE</Link></Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
+                                                </Card.Body>
+                                            </center>
+                                        </div>
+                                    </Card>
+                                </Col>
 
-                            <Col>
-                                <Card>
-                                    <center>
-                                        <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/react.png"} />
-                                        <Card.Body>
-                                            <Card.Title>REACT</Card.Title>
-                                            <Card.Text>
-                                            React is a free and open-source front-end JavaScript library for building user interfaces or UI components.It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications
-                                            </Card.Text>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  onClick={handleShow} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{textDecoration:"none", color:"#000"}} to="/tech-trillion/certificate">SAMPLE CERTIFICATE</Link></Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
-                                        </Card.Body>
-                                    </center>
-                                </Card>
-                            </Col>
+                                <Col>
+                                    <Card>
+                                        <div className="animated fadeIn">
+                                            <center>
+                                                <div className="animated rotateIn">
+                                                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/react.jpeg"} style={{ width: "100%" }} />
+                                                </div>
+                                                <Card.Body>
+                                                    <Card.Title>REACT</Card.Title>
+                                                    <Card.Text>
+                                                        React is a free and open-source front-end JavaScript library for building user interfaces or UI components.It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications
+                                                    </Card.Text>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" onClick={() => handleClick(ReactCourse)} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/certificate">SAMPLE CERTIFICATE</Link></Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
+                                                </Card.Body>
+                                            </center>
+                                        </div>
+                                    </Card>
+                                </Col>
 
-                            <Col>
-                                <Card>
-                                    <center>
-                                        <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/react-native.png"} />
-                                        <Card.Body>
-                                            <Card.Title>REACT NATIVE</Card.Title>
-                                            <Card.Text>
-                                            React Native is an open-source UI software framework created by Facebook, Inc. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows and UWP by enabling developers to use the React framework along with native platform capabilities.
-                                            </Card.Text>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  onClick={handleShow} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{textDecoration:"none", color:"#000"}} to="/tech-trillion/certificate">SAMPLE CERTIFICATE</Link></Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
-                                        </Card.Body>
-                                    </center>
-                                </Card>
-                            </Col>
+                                <Col>
+                                    <Card>
+                                        <div className="animated fadeIn">
+                                            <center>
+                                                <div className="animated rotateIn">
+                                                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/node.png"} style={{ width: "100%" }} />
+                                                </div>
+                                                <Card.Body>
+                                                    <Card.Title>NODE JS</Card.Title>
+                                                    <Card.Text>
+                                                        Node.js is an asynchronous event-driven JavaScript runtime, it is designed to build scalable network applications, many connections can be handled concurrently. It is the most widely used compiler for server side rendering of JavaScript.
+                                                    </Card.Text>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" onClick={() => handleClick(NodeJS)} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/certificate">SAMPLE CERTIFICATE</Link></Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
+                                                </Card.Body>
+                                            </center>
+                                        </div>
+                                    </Card>
+                                </Col>
 
-                        </Row>
-                        {/* END OF ROW_1 */}
+                            </Row>
+                            </div>
+                            {/* END OF ROW_1 */}
 
-                        {/* ROW-2 */}
-                        <Row>
+                            {/* ROW-2 */}
+                            <div className="animatedParent">
+                            <Row>
 
-                            <Col>
-                                <Card>
-                                    <center>
-                                        <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/hacking.png"} />
-                                        <Card.Body>
-                                            <Card.Title>ETHICAL HACKING</Card.Title>
-                                            <Card.Text>
-                                            Certified Ethical Hacker is a qualification obtained by demonstrating knowledge of assessing the security of computer systems by looking for weaknesses and vulnerabilities in target systems
-                                            </Card.Text>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  onClick={handleShow} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{textDecoration:"none", color:"#000"}} to="/tech-trillion/certificate">SAMPLE CERTIFICATE</Link></Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
-                                        </Card.Body>
-                                    </center>
-                                </Card>
-                            </Col>
+                                <Col>
+                                    <Card>
+                                        <div className="animated fadeIn">
+                                            <center>
+                                                <div className="animated rotateIn">
+                                                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/frontend.png"} style={{ width: "100%" }} />
+                                                </div>
+                                                <Card.Body>
+                                                    <Card.Title>FRONTEND FUNDAMENTALS</Card.Title>
+                                                    <Card.Text>
+                                                        Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.
+                                                    </Card.Text>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" onClick={() => handleClick(FrontendFundamentals)} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/certificate">SAMPLE CERTIFICATE</Link></Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
+                                                </Card.Body>
+                                            </center>
+                                        </div>
+                                    </Card>
+                                </Col>
 
-                            <Col>
-                                <Card>
-                                    <center>
-                                        <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/cloud.png"} />
-                                        <Card.Body>
-                                            <Card.Title>AWS</Card.Title>
-                                            <Card.Text>
-                                            Amazon Web Services, Inc. is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.
-                                            </Card.Text>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  onClick={handleShow} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{textDecoration:"none", color:"#000"}} to="/tech-trillion/certificate">SAMPLE CERTIFICATE</Link></Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
-                                        </Card.Body>
-                                    </center>
-                                </Card>
-                            </Col>
+                                <Col>
+                                    <Card>
+                                        <div className="animated fadeIn">
+                                            <center>
+                                                <div className="animated rotateIn">
+                                                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/cpp.png"} style={{ width: "100%" }} />
+                                                </div>
+                                                <Card.Body>
+                                                    <Card.Title>C++</Card.Title>
+                                                    <Card.Text>
+                                                        C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or "C with Classes". The language has expanded significantly over time, and modern C++ now has object-oriented, generic, and functional features in addition to facilities for low-level memory manipulation.
+                                                    </Card.Text>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" onClick={() => handleClick(CPP)} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/certificate">SAMPLE CERTIFICATE</Link></Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
+                                                </Card.Body>
+                                            </center>
+                                        </div>
+                                    </Card>
+                                </Col>
 
-                            <Col>
-                                <Card>
-                                    <center>
-                                        <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/sql.png"} />
-                                        <Card.Body>
-                                            <Card.Title>SQL</Card.Title>
-                                            <Card.Text>
-                                            SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system.
-                                            </Card.Text>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  onClick={handleShow} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{textDecoration:"none", color:"#000"}} to="/tech-trillion/certificate">SAMPLE CERTIFICATE</Link></Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
-                                        </Card.Body>
-                                    </center>
-                                </Card>
-                            </Col>
+                                <Col>
+                                    <Card>
+                                        <div className="animated fadeIn">
+                                            <center>
+                                                <div className="animated rotateIn">
+                                                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/sqlite.png"} style={{ width: "100%" }} />
+                                                </div>
+                                                <Card.Body>
+                                                    <Card.Title>SQLite</Card.Title>
+                                                    <Card.Text>
+                                                        SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world. SQLite is built into all mobile phones and most computers and comes bundled inside countless other applications that people use every day.
+                                                    </Card.Text>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" onClick={() => handleClick(SQLite)} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/certificate">SAMPLE CERTIFICATE</Link></Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
+                                                </Card.Body>
+                                            </center>
+                                        </div>
+                                    </Card>
+                                </Col>
 
-                        </Row>
-                        {/* END OF ROW_2 */}
+                            </Row>
+                            </div>
+                            {/* END OF ROW_2 */}
 
-                        {/* ROW-3 */}
-                        <Row>
+                            {/* ROW-3 */}
+                            <div className="animatedParent">
+                            <Row>
 
-                            <Col>
-                                <Card>
-                                    <center>
-                                        <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/python.png"} />
-                                        <Card.Body>
-                                            <Card.Title>PYTHON PROGRAMMING</Card.Title>
-                                            <Card.Text>
-                                            Python is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
-                                            </Card.Text>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  onClick={handleShow} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{textDecoration:"none", color:"#000"}} to="/tech-trillion/certificate">SAMPLE CERTIFICATE</Link></Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
-                                        </Card.Body>
-                                    </center>
-                                </Card>
-                            </Col>
+                                <Col>
+                                    <Card>
+                                        <div className="animated fadeIn">
+                                            <center>
+                                                <div className="animated rotateIn">
+                                                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/python.png"} style={{ width: "100%" }} />
+                                                </div>
+                                                <Card.Body>
+                                                    <Card.Title>PYTHON PROGRAMMING</Card.Title>
+                                                    <Card.Text>
+                                                        Python is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
+                                                    </Card.Text>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" onClick={() => handleClick(Python)} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/certificate">SAMPLE CERTIFICATE</Link></Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
+                                                </Card.Body>
+                                            </center>
+                                        </div>
+                                    </Card>
+                                </Col>
 
-                            <Col>
-                                <Card>
-                                    <center>
-                                        <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/ruby.png"} />
-                                        <Card.Body>
-                                            <Card.Title>RUBY ON THE RAILS</Card.Title>
-                                            <Card.Text>
-                                            Ruby is an interpreted, high-level, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan. Ruby is dynamically typed and uses garbage collection and just-in-time compilation.
-                                            </Card.Text>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  onClick={handleShow} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{textDecoration:"none", color:"#000"}} to="/tech-trillion/certificate">SAMPLE CERTIFICATE</Link></Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
-                                        </Card.Body>
-                                    </center>
-                                </Card>
-                            </Col>
+                                <Col>
+                                    <Card>
+                                        <div className="animated fadeIn">
+                                            <center>
+                                                <div className="animated rotateIn">
+                                                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/java.png"} style={{ width: "100%" }} />
+                                                </div>
+                                                <Card.Body>
+                                                    <Card.Title>JAVA</Card.Title>
+                                                    <Card.Text>
+                                                        Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA).
+                                                    </Card.Text>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" onClick={() => handleClick(JavaFundamental)} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/certificate">SAMPLE CERTIFICATE</Link></Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
+                                                </Card.Body>
+                                            </center>
+                                        </div>
+                                    </Card>
+                                </Col>
 
-                            <Col>
-                                <Card>
-                                    <center>
-                                        <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/mobile-app-dev.png"} />
-                                        <Card.Body>
-                                            <Card.Title>MOBILE APP DEVELOPMENT</Card.Title>
-                                            <Card.Text>
-                                            Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones.
-                                            </Card.Text>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  onClick={handleShow} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{textDecoration:"none", color:"#000"}} to="/tech-trillion/certificate">SAMPLE CERTIFICATE</Link></Button>
-                                            <Button className="btn btn-default btn-lg btn-block responsive-width"  style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
-                                        </Card.Body>
-                                    </center>
-                                </Card>
-                            </Col>
+                                <Col>
+                                    <Card>
+                                        <div className="animated fadeIn">
+                                            <center>
+                                                <div className="animated rotateIn">
+                                                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/madjava.png"} style={{ width: "100%" }} />
+                                                </div>
+                                                <Card.Body>
+                                                    <Card.Title>MOBILE APP DEVELOPMENT WITH JAVA</Card.Title>
+                                                    <Card.Text>
+                                                        This course teaches you how to program core features and classes from the Java programming language that are used in Android, which is the dominant platform for developing and deploying mobile device apps.
+                                                    </Card.Text>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" onClick={() => handleClick(MobileAppDevelopmentWithJava)} style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SYLLABUS</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">PREREQUISITES</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">SAMPLE LECTURE</Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/certificate">SAMPLE CERTIFICATE</Link></Button>
+                                                    <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "70%", background: "rgba(143, 201, 254, 1)", margin: "2%", fontFamily: "Roboto", fontSize: "medium" }} variant="">APPLY NOW</Button>
+                                                </Card.Body>
+                                            </center>
+                                        </div>
+                                    </Card>
+                                </Col>
 
-                        </Row>
-                        {/* END OF ROW_3 */}
+                            </Row>
+                            </div>
+                            {/* END OF ROW_3 */}
 
-                    </Container>
-                </CardGroup>
-            </div>
+                        </Container>
+                    </CardGroup>
+
+                </div>
+
+                {visibility && <SyllabusModal container={data} closeModal={closeModal} />}
         </>
     )
 }

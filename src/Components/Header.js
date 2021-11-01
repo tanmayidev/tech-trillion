@@ -7,7 +7,7 @@ function Header() {
             <div>
             <div className="container">
                     <a href = "/">info@techtrillion.com</a>
-                    <p>+91 6361 167 740 </p>
+                    <a >+91 6361 167 740 </a>
             </div>
             </div>
         </div>

@@ -8,6 +8,7 @@
     padding: 20px;
     margin: 2%;
     min-height: 100%;
+    box-shadow: 5px 10px 20px gray;
 }
 
 .Courses img {

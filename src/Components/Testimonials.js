@@ -8,8 +8,9 @@ function Testimonials() {
         <div className="Testimonials">
             <CardGroup>
                 <Card>
+                <div className="animated rotateIn">
                     <center>
-                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/speak.png"} />
+                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/user.png"} />
                     <Card.Body>
                         <Card.Title>Name</Card.Title>
                         <Card.Text>
@@ -18,10 +19,12 @@ function Testimonials() {
                         </Card.Text>
                     </Card.Body>
                     </center>
+                    </div>
                 </Card>
                 <Card>
+                <div className="animated rotateIn">
                     <center>
-                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/speak.png"} />
+                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/user.png"} />
                     <Card.Body>
                         <Card.Title>Name</Card.Title>
                         <Card.Text>
@@ -30,10 +33,12 @@ function Testimonials() {
                         </Card.Text>
                     </Card.Body>
                     </center>
+                    </div>
                 </Card>
                 <Card>
+                <div className="animated rotateIn">
                     <center>
-                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/speak.png"} />
+                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/user.png"} />
                     <Card.Body>
                         <Card.Title>Name</Card.Title>
                         <Card.Text >
@@ -42,6 +47,7 @@ function Testimonials() {
                         </Card.Text>
                     </Card.Body>
                     </center>
+                    </div>
                 </Card>
             </CardGroup>
         </div>

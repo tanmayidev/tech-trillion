@@ -1,4 +1,69 @@
-.slidering{
-    max-width: 100%;
-    max-height: 100%;
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+#slide1 {
+    position: relative;
+    align-content: center;
+}
+#slide1 img {
+    width: 100vw;
+    padding: 0vw 2vw 0vw 2vw;
+    border-radius: 5%;
+    opacity: 0.8;
+}
+#slide1 h1 {
+    position: absolute;
+    font-size: 5vw;
+    font-weight: bolder;
+    top:5%;
+    left:5%
+}
+#slide1 .button.btn.btn-primary {
+    position: absolute;
+    font-size: 3vw;
+    top:30%;
+    left:5%
+}
+
+#slide2 img {
+    width: 100vw;
+    padding: 0vw 2vw 0vw 2vw;
+    border-radius: 5%;
+    opacity: 0.8;
+}
+#slide2 h1 {
+    position: absolute;
+    font-size: 5vw;
+    color: ivory;
+    font-weight: bolder;
+    top:5%;
+    left:5%
+}
+#slide2 .button.btn.btn-primary {
+    position: absolute;
+    font-size: 3vw;
+    top:30%;
+    left:5%
+}
+
+#slide3 img {
+    width: 100vw;
+    border-radius: 5%;
+    padding: 0vw 2vw 0vw 2vw;
+    opacity: 0.9;
+}
+#slide3 h1 {
+    position: absolute;
+    font-size: 5vw;
+    color: ivory;
+    font-weight: bolder;
+    top:5%;
+    left:5%
+}
+#slide3 .button.btn.btn-primary {
+    position: absolute;
+    font-size: 3vw;
+    top:30%;
+    left:5%
 }

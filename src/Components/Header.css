@@ -1,16 +1,15 @@
 .Header .container {
     display: flex;
-    padding-top: 1%;
     justify-content: right;
+    align-items: center;
+    background-color: #78909c;
+    min-width: 99.2vw;
+    padding: 5px;
 }
 
 .Header a{
     margin-right: 1% ;
     margin-left: 1%;
     color: black;
-}
-
-.Header p{
-    margin-right: 1% ;
-    margin-left: 1%;
+    align-items: center;
 }

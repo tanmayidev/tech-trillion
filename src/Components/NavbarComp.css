@@ -4,6 +4,7 @@
     letter-spacing: 0.15em;
     font-size: medium;
     background-color: transparent;
+    font-weight: bold;
   }
 
   .NavigationBar .nav-link {
@@ -13,7 +14,7 @@
 }
 .NavigationBar .nav-link:hover {
     border-bottom: 3px solid;
-    font-weight: bold;
+    font-weight: bolder;
     color: black;
 }
 

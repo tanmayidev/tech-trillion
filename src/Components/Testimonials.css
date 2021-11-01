@@ -2,8 +2,7 @@
     background-color: #DFEAFB;
     padding: 20px;
     margin: 2%;
-    
-    overflow: scroll;
+    min-height: 100%;
 }
 
 .Testimonials img {
