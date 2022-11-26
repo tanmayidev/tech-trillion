@@ -15,7 +15,7 @@ function PopularCourses() {
                         <div className="overlay-card" style={{backgroundImage:`url(${techtrillion}/Images/pythonPopular.png`}}>
                             <div className="card-content">
                                 <h3>PYTHON</h3>
-                                <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "60%", background: "rgba(143, 201, 254, 1)", fontFamily: "Roboto", fontSize: "0.98rem" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/courses">CHECK OUT</Link></Button>
+                                {/* <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "60%", background: "rgba(143, 201, 254, 1)", fontFamily: "Roboto", fontSize: "0.98rem" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/courses">CHECK OUT</Link></Button> */}
                             </div>
                         </div>
                     </div>
@@ -23,15 +23,23 @@ function PopularCourses() {
                         <div className="overlay-card"  style={{backgroundImage:`url(${techtrillion}/Images/javaPopular.png`}}>
                             <div className="card-content">
                                 <h3>JAVA</h3>
-                                <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "60%", background: "rgba(143, 201, 254, 1)", fontFamily: "Roboto", fontSize: "0.98rem" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/courses">CHECK OUT</Link></Button>
+                                {/* <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "60%", background: "rgba(143, 201, 254, 1)", fontFamily: "Roboto", fontSize: "0.98rem" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/courses">CHECK OUT</Link></Button> */}
                             </div>
                         </div>
                     </div>
                     <div className="animated bounceIn">
-                        <div className="overlay-card"  style={{backgroundImage:`url(${techtrillion}/Images/cPopular.png`}}>
+                        <div className="overlay-card"  style={{backgroundImage:`url(${techtrillion}/Images/aws-logo.png`, backgroundSize: `contain`}}>
                             <div className="card-content">
-                                <h3>C LANGUAGE</h3>
-                                <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "60%", background: "rgba(143, 201, 254, 1)", fontFamily: "Roboto", fontSize: "0.98rem" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/courses">CHECK OUT</Link></Button>
+                                <h3>Amazon Web Services</h3>
+                                {/* <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "60%", background: "rgba(143, 201, 254, 1)", fontFamily: "Roboto", fontSize: "0.98rem" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/courses">CHECK OUT</Link></Button> */}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="animated bounceIn">
+                        <div className="overlay-card"  style={{backgroundImage:`url(${techtrillion}/Images/frontend.png`, backgroundSize: `contain`, color: 'white'}}>
+                            <div className="card-content">
+                                <h3>FRONT-END ESSENTIALS</h3>
+                                {/* <Button className="btn btn-default btn-lg btn-block responsive-width" style={{ width: "60%", background: "rgba(143, 201, 254, 1)", fontFamily: "Roboto", fontSize: "0.98rem" }} variant=""><Link style={{ textDecoration: "none", color: "#000" }} to="/courses">CHECK OUT</Link></Button> */}
                             </div>
                         </div>
                     </div>

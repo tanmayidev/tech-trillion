@@ -11,7 +11,7 @@ function Footer() {
                     <Link style={{textDecoration:"none", color:"#fff"}} to="/">REFUNDS AND CANCELLATIONS</Link>
                     <Link style={{textDecoration:"none", color:"#fff"}} to="/">PRIVACY POLICY</Link>
             </div>
-            <p>© 2021 – Tech Trillion Pvt.Ltd</p>
+            <p>© {new Date().getFullYear()} – Tech Trillion Pvt.Ltd</p>
             <div className="container">
             <Link style={{textDecoration:"none", color:"#000"}} to="/"> 
             <img alt="" src={process.env.PUBLIC_URL + "/Images/twitter.png"} />

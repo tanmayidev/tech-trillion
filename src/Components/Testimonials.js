@@ -10,12 +10,11 @@ function Testimonials() {
                 <Card>
                 <div className="animated rotateIn">
                     <center>
-                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/user.png"} />
+                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/Harsh.jpg"} />
                     <Card.Body>
-                        <Card.Title>Name</Card.Title>
+                        <Card.Title>Harsh</Card.Title>
                         <Card.Text>
-                            I like this website a lot, This website helped me achieve several things.
-                            It made me get a placed in a good company. I am grateful for Tech Trillion.
+                            In terms of feedback, I've really enjoyed what I've been able to do on the course and have found the lectures helpful, certainly in terms of demonstration. It's certainly felt worthwhile and added more scope to just the basic course.
                         </Card.Text>
                     </Card.Body>
                     </center>
@@ -24,12 +23,11 @@ function Testimonials() {
                 <Card>
                 <div className="animated rotateIn">
                     <center>
-                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/user.png"} />
+                    <Card.Img alt="" variant="top" src={process.env.PUBLIC_URL + "/Images/Jane Doe.jpg"} />
                     <Card.Body>
-                        <Card.Title>Name</Card.Title>
+                        <Card.Title>Jane Doe</Card.Title>
                         <Card.Text>
-                            I like this website a lot, This website helped me achieve several things.
-                            I got an A grade for my project in college. They not only helped me with finding the project but also explained it well.
+                            Practice, practice and more practice. You can't become a programmer if you only read books. Ive been programming for couple of years and this website helped me to develop my coding skills really fast.
                         </Card.Text>
                     </Card.Body>
                     </center>
@@ -38,12 +36,11 @@ function Testimonials() {
                 <Card>
                 <div className="animated rotateIn">
                     <center>
-                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/user.png"} />
+                    <Card.Img alt="" src={process.env.PUBLIC_URL + "/Images/Lakshmi.jpg"} />
                     <Card.Body>
-                        <Card.Title>Name</Card.Title>
+                        <Card.Title>Lakshmi</Card.Title>
                         <Card.Text >
-                            I like this website a lot, This website helped me achieve several things.
-                            I got good scores in my classes after I joined the tuitions for engineering mathematics. The tuition prices are more affordable and quality is much better.
+                            I'm impressed with the course so far. The tasks are challenging, but the immediate feedback I get on the website has been tremendously helpful. The amount of high-quality content in TecTrillion is amazing.
                         </Card.Text>
                     </Card.Body>
                     </center>

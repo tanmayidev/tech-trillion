@@ -19,7 +19,7 @@ export default function CarouselBox() {
             </div>
             <div id="slide3">
                 <img alt="" src="/Images/aboutUs-banner.jpg"/>
-                <h1>Amazing Tutorials</h1>
+                <h1>Corporate Training</h1>
                 <Link to="/about"><Button className="button">Learn More!</Button></Link>
             </div>
         </AliceCarousel>
